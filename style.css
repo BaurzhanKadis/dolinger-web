@@ -2640,8 +2640,8 @@ canvas {
     display: block;
   }
 
-  #function_items {
-    /* overflow: hidden; */
+  .function_items-container {
+    overflow: hidden;
   }
   #canvas_top_wave .wrapper {
     overflow: hidden;

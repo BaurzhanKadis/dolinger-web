@@ -103,45 +103,55 @@ window.onload = () => {
     }
   }
 
+  // if (window.innerWidth <= 992) {
+  //   document.querySelector('.admin').after(document.querySelector('.admin-three'))
+  // } else {
+  //   document.querySelector('.admin').append(document.querySelector('.admin-three'))
+  // }
+
+};
+
+$(document).ready(function(){
   if (window.innerWidth <= 992) {
     document.querySelector('.admin').after(document.querySelector('.admin-three'))
   } else {
     document.querySelector('.admin').append(document.querySelector('.admin-three'))
   }
 
-  const sliderClick = (offset, padding = 20) => {
-    document.querySelector('.admin').addEventListener('mousedown', (e) => {
-      console.log(e.offsetX,'e.offsetX')
-      if (e.offsetX < point) {
-        document.querySelector('.admin').style.transform = `translateX(${(offset-padding)-(widthItemSlider+30)}px)`;//margin beetwen of items-sliders
-        document.querySelector('.prev').classList.remove('active-dot')
-        document.querySelector('.next').classList.add('active-dot')
-      } else {
-        document.querySelector('.admin').style.transform = `translateX(${(offset-padding)}px)`;
-        document.querySelector('.prev').classList.add('active-dot')
-        document.querySelector('.next').classList.remove('active-dot')
-      }
-    })
+  console.log("start page2");
+  if (window.innerWidth <= 480) {
+    document.querySelectorAll('.item_slider').forEach(e=>e.style.width = "220px")
+    $(".slider").addClass("owl-carousel")
+    $(".owl-carousel").owlCarousel({
+      center: true,
+      autoWidth: true,
+      items: 1,
+      dotsEach: true,
+      margin: 30
+    });
+  } else {
+    $(".slider").removeClass("owl-carousel")
   }
-  
-  const centerItemSlider = () => {
-    let offsetParent = window.innerWidth/2;
-    let offsetChild = widthItemSlider/2;
-    let offset = offsetParent - offsetChild;
-    point = offsetChild;
-    document.querySelector('.admin').style.transform = `translateX(${offset-20}px)`;
-    console.log(offset, 'offset');
-    sliderClick(offset);
+  if (window.innerWidth <= 768) {
+    document.querySelectorAll('.function_item').forEach(e=>e.style.width = "210px")
+    $(".function_items").addClass("owl-carousel")
+    $(".owl-carousel").owlCarousel({
+      center: true,
+      autoWidth: true,
+      items: 1,
+      dotsEach: true,
+      margin: 30
+    });
+  } else {
+    $(".function_items").removeClass("owl-carousel")
   }
 
-  let point;
-  let widthItemSlider = document.querySelector('.admin-one').offsetWidth;
-  if (window.innerWidth <= 480) {
-    centerItemSlider();
-  } else {
-    document.querySelector('.admin').style.transform = `translateX(0)`;
-  }
-};
+  baurWave(idWaveCTW, colorStartCTW, colorEndCTW, 440, 50);
+  baurWave(idWaveCBW, colorStartCBW, colorEndCBW, 600, 200);
+  baurWave(idWaveC, colorStartC, colorEndC, 360, 80);
+  baurWave(idDesignWave, colorStartDW, colorEndDW, 700, 300);
+  baurWave(idOrderW, colorStartOW, colorEndOW, 500, 200);
+});
 
 window.onresize = () => {
   if (window.innerWidth <= 992) {
@@ -169,8 +179,8 @@ const baurWave = (id, colorStart, colorEnd, heightWave, AM) => {
         y: AM,
       },
       duration: {
-        min: 500,
-        max: 500,
+        min: 700,
+        max: 700,
       },
       thickness: 1,
       strokeColor: grdline,
@@ -334,11 +344,11 @@ const idOrderW = "order_wave",
 colorStartOW = '#EEF8ED',
 colorEndOW = '#EAF4EB';
 
-baurWave(idWaveCTW, colorStartCTW, colorEndCTW, 440, 100);
-baurWave(idWaveCBW, colorStartCBW, colorEndCBW, 600, 200);
-baurWave(idWaveC, colorStartC, colorEndC, 360, 80);
-baurWave(idDesignWave, colorStartDW, colorEndDW, 700, 300);
-baurWave(idOrderW, colorStartOW, colorEndOW, 500, 200);
+// baurWave(idWaveCTW, colorStartCTW, colorEndCTW, 440, 100);
+// baurWave(idWaveCBW, colorStartCBW, colorEndCBW, 600, 200);
+// baurWave(idWaveC, colorStartC, colorEndC, 360, 80);
+// baurWave(idDesignWave, colorStartDW, colorEndDW, 700, 300);
+// baurWave(idOrderW, colorStartOW, colorEndOW, 500, 200);
 
 // count — количество точек в волне, на которых будут происходить колебания;
 // range — амплитуды колебаний по оси x и y;

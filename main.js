@@ -142,15 +142,10 @@ $(document).ready(function(){
       dotsEach: true,
       margin: 30
     });
+    document.querySelector('#function_items .wrapper').append(document.querySelector('.function_items .owl-dots'))
   } else {
     $(".function_items").removeClass("owl-carousel")
   }
-
-  baurWave(idWaveCTW, colorStartCTW, colorEndCTW, 440, 50);
-  baurWave(idWaveCBW, colorStartCBW, colorEndCBW, 600, 200);
-  baurWave(idWaveC, colorStartC, colorEndC, 360, 80);
-  baurWave(idDesignWave, colorStartDW, colorEndDW, 700, 300);
-  baurWave(idOrderW, colorStartOW, colorEndOW, 500, 200);
 });
 
 window.onresize = () => {
@@ -344,11 +339,11 @@ const idOrderW = "order_wave",
 colorStartOW = '#EEF8ED',
 colorEndOW = '#EAF4EB';
 
-// baurWave(idWaveCTW, colorStartCTW, colorEndCTW, 440, 100);
-// baurWave(idWaveCBW, colorStartCBW, colorEndCBW, 600, 200);
-// baurWave(idWaveC, colorStartC, colorEndC, 360, 80);
-// baurWave(idDesignWave, colorStartDW, colorEndDW, 700, 300);
-// baurWave(idOrderW, colorStartOW, colorEndOW, 500, 200);
+baurWave(idWaveCTW, colorStartCTW, colorEndCTW, 440, 100);
+baurWave(idWaveCBW, colorStartCBW, colorEndCBW, 600, 200);
+baurWave(idWaveC, colorStartC, colorEndC, 360, 80);
+baurWave(idDesignWave, colorStartDW, colorEndDW, 700, 300);
+baurWave(idOrderW, colorStartOW, colorEndOW, 500, 200);
 
 // count — количество точек в волне, на которых будут происходить колебания;
 // range — амплитуды колебаний по оси x и y;

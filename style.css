@@ -299,6 +299,9 @@ header {
   height: 1px;
   background-color: #f7984b;
 }
+.mini_phone {
+  display: none;
+}
 
 /* section discription start */
 #discription {
@@ -2672,6 +2675,9 @@ canvas {
   .top_item-btn_normal {
     margin: 17px auto;
   }
+  .mini_phone {
+    display: block;
+  }
   .zoom-item:nth-child(2) {
     height: 170px;
   }
@@ -2857,7 +2863,7 @@ canvas {
     top: -100px;
   }
 }
-@media (max-width: 374px) {
+@media (max-width: 375px) {
   h1.mobile_h1 {
     font-size: 24px;
     margin-top: 30px;

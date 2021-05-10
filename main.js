@@ -112,6 +112,9 @@ window.onload = () => {
 };
 
 $(document).ready(function(){
+  $('.header__burger').click(()=>{
+    $('.header__burger').toggleClass('active_burger');
+  })
   if (window.innerWidth <= 992) {
     document.querySelector('.admin').after(document.querySelector('.admin-three'))
   } else {

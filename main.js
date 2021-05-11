@@ -30,7 +30,7 @@ window.onload = () => {
   btnReg.addEventListener("click", () => {
     fixC.classList.add("fix_callback-active");
     b.classList.add("body-hidden");
-  });
+  },{passive: true});
 
   submit.addEventListener("click", () => {
     items.forEach((item) => {
@@ -38,7 +38,7 @@ window.onload = () => {
     });
     document.querySelector(".good").classList.add("db");
     document.querySelector(".modal-container").classList.add("wa");
-  });
+  },{passive: true});
 
   const btnClose = (e) => {
     e.addEventListener("click", () => {
@@ -52,7 +52,7 @@ window.onload = () => {
           document.querySelector(".modal-container").classList.remove("wa");
         });
       }
-    });
+    },{passive: true});
   };
 
   btnClose(closeModal);
@@ -149,6 +149,12 @@ $(document).ready(function(){
   } else {
     $(".function_items").removeClass("owl-carousel")
   }
+
+  baurWave(idWaveCTW, colorStartCTW, colorEndCTW, 440, 100);
+baurWave(idWaveCBW, colorStartCBW, colorEndCBW, 600, 200);
+baurWave(idWaveC, colorStartC, colorEndC, 360, 80);
+baurWave(idDesignWave, colorStartDW, colorEndDW, 700, 300);
+baurWave(idOrderW, colorStartOW, colorEndOW, 500, 200);
 });
 
 window.onresize = () => {
@@ -342,11 +348,11 @@ const idOrderW = "order_wave",
 colorStartOW = '#EEF8ED',
 colorEndOW = '#EAF4EB';
 
-baurWave(idWaveCTW, colorStartCTW, colorEndCTW, 440, 100);
-baurWave(idWaveCBW, colorStartCBW, colorEndCBW, 600, 200);
-baurWave(idWaveC, colorStartC, colorEndC, 360, 80);
-baurWave(idDesignWave, colorStartDW, colorEndDW, 700, 300);
-baurWave(idOrderW, colorStartOW, colorEndOW, 500, 200);
+// baurWave(idWaveCTW, colorStartCTW, colorEndCTW, 440, 100);
+// baurWave(idWaveCBW, colorStartCBW, colorEndCBW, 600, 200);
+// baurWave(idWaveC, colorStartC, colorEndC, 360, 80);
+// baurWave(idDesignWave, colorStartDW, colorEndDW, 700, 300);
+// baurWave(idOrderW, colorStartOW, colorEndOW, 500, 200);
 
 // count — количество точек в волне, на которых будут происходить колебания;
 // range — амплитуды колебаний по оси x и y;

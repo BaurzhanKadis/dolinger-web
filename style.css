@@ -893,7 +893,7 @@ canvas {
 #el_menu {
   /* max-width: 1900px;
   margin: 0 auto; */
-  background-image: url(./images/mobile/restoran.jp2);
+  background: url(./images/mobile/restoran.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
@@ -2328,7 +2328,7 @@ canvas {
     padding-top: 0;
   }
   .el_menu-item-right {
-    background-image: url(./images/mobile/restoran.jp2);
+    background-image: url(./images/mobile/restoran.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;

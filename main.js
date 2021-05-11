@@ -1,6 +1,6 @@
 window.onload = () => {
   console.log("start page");
-
+  
   const btnReg = document.querySelector(".top_item-btn_grnd");
   const b = document.querySelector("body");
   const fixC = document.querySelector(".fix_callback");
@@ -112,6 +112,8 @@ window.onload = () => {
 };
 
 $(document).ready(function(){
+  $(".maskPhone").mask("+7 (999) 999-99-99");
+
   $('.header__burger').click(()=>{
     $('.header__burger').toggleClass('active_burger');
   })

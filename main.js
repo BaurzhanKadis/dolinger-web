@@ -112,7 +112,6 @@ window.onload = () => {
 };
 
 $(document).ready(function(){
-  $(".maskPhone").mask("+7 (999) 999-99-99");
 
   $('.header__burger').click(()=>{
     $('.header__burger').toggleClass('active_burger');
@@ -152,11 +151,13 @@ $(document).ready(function(){
     $(".function_items").removeClass("owl-carousel")
   }
 
+  $(".maskPhone").mask("+7 (999) 999-99-99");
+
   baurWave(idWaveCTW, colorStartCTW, colorEndCTW, 440, 100);
-baurWave(idWaveCBW, colorStartCBW, colorEndCBW, 600, 200);
-baurWave(idWaveC, colorStartC, colorEndC, 360, 80);
-baurWave(idDesignWave, colorStartDW, colorEndDW, 700, 300);
-baurWave(idOrderW, colorStartOW, colorEndOW, 500, 200);
+  baurWave(idWaveCBW, colorStartCBW, colorEndCBW, 600, 200);
+  baurWave(idWaveC, colorStartC, colorEndC, 360, 80);
+  baurWave(idDesignWave, colorStartDW, colorEndDW, 700, 300);
+  baurWave(idOrderW, colorStartOW, colorEndOW, 500, 200);
 });
 
 window.onresize = () => {
@@ -179,7 +180,7 @@ const baurWave = (id, colorStart, colorEnd, heightWave, AM) => {
     (points = []),
     (tick = 0),
     (opt = {
-      count: 5,
+      count: window.innerWidth <= 375 ? 2 : 5,
       range: {
         x: 10,
         y: AM,

@@ -1,7 +1,25 @@
 window.onload = () => {
   console.log("start page");
+
+  // function get_name_browser(){
+  //   // получаем данные userAgent
+  //   var ua = navigator.userAgent;    
+  //   // с помощью регулярного выражения
+  //   // ищем упоминание названия браузера
+  //   if (ua.search(/Safari/) > 0) return true;
+  //   // Возвращем false если не нашли safari
+  //   return false;
+  // }
+    
+    
+  // // Если функция вернула true
+  // // То подключаем css
+  // if (get_name_browser()) {
+  //   document.write('<link rel="stylesheet" href="css/safari.css">');
+  // }
   
-  const btnReg = document.querySelector(".top_item-btn_grnd");
+  // const btnReg = document.querySelector(".top_item-btn_grnd");
+  const btnReg = document.querySelectorAll(".btn-reg");
   const b = document.querySelector("body");
   const fixC = document.querySelector(".fix_callback");
   const closeModal = document.querySelector(".close_window");
@@ -27,10 +45,17 @@ window.onload = () => {
       .forEach((e) => (e.innerHTML = "Оставить заявку"));
   }
 
-  btnReg.addEventListener("click", () => {
-    fixC.classList.add("fix_callback-active");
-    b.classList.add("body-hidden");
-  },{passive: true});
+  btnReg.forEach(e=>{
+    e.addEventListener("click", () => {
+      fixC.classList.add("fix_callback-active");
+      b.classList.add("body-hidden");
+    },{passive: true})
+  })
+
+  // btnReg.addEventListener("click", () => {
+  //   fixC.classList.add("fix_callback-active");
+  //   b.classList.add("body-hidden");
+  // },{passive: true});
 
   submit.addEventListener("click", () => {
     items.forEach((item) => {
@@ -146,7 +171,7 @@ $(document).ready(function(){
       dotsEach: true,
       margin: 30
     });
-    document.querySelector('#function_items .wrapper').append(document.querySelector('.function_items .owl-dots'))
+    // document.querySelector('#function_items .wrapper').append(document.querySelector('.function_items .owl-dots'))
   } else {
     $(".function_items").removeClass("owl-carousel")
   }

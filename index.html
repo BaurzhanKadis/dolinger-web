@@ -46,8 +46,8 @@
               <a><img class="img_apple" src="./svg-img/apple.svg" /></a>       
               <a><img src="./svg-img/android.svg" /></a>
             </div>
-            <a class="top_item-btn_grnd btn_grnd " href="#">Записаться на презентацию</a>         
-            <a class="top_item-btn_normal" href="#">Оставить заявку на подключение</a>
+            <a class="top_item-btn_grnd btn_grnd btn-reg" href="#">Записаться на презентацию</a>         
+            <a class="top_item-btn_normal btn-reg" href="#">Оставить заявку на подключение</a>
           </div>
           <div class="top_item">
             <!-- <img class="top_mobile-img" src="./svg-img/mobile/web-app.svg" alt="" /> -->
@@ -188,7 +188,7 @@
           <div class="zoom-item">
             <h3>Презентация приложения в Zoom</h3>
             <p>Оставьте заявку и мы проведем для вас презентацию приложения в Zoom, ответим на все ваши вопросы о функционале, стоимости и возможностях продвижения</p>
-            <a class="btn_grnd" href="#">Оставить заявку</a>
+            <a class="btn_grnd btn-reg" href="#">Оставить заявку</a>
           </div>
           <div class="zoom-item">
             <img src="./svg-img/icon-section-zoom.svg" alt="icon-section-zoom">
@@ -294,7 +294,7 @@
         <div class="wrapper">
           <div class="trecker standart">
             <div class="trecker-item standart-item trecker-item-left">
-              <img src="./svg-img/app-1.svg" alt="app">
+              <img src="/images/mobile/app-1-mobile.svg" alt="app1">
               <img src="./svg-img/app-2.svg" alt="app">
             </div>
             <div class="trecker-item standart-item trecker-item-right">
@@ -329,7 +329,11 @@
               </div> 
             </div>
             <div class="el_menu-item el_menu-item-right">
-              <img src="./images/Component.png" alt="">
+              <picture>
+                <img max-width="480" src="/images/mobile/hend-mobile.png" alt="hend" sizes="" srcset="">
+                <!-- <img src="./images/Component.png" alt=""> -->
+                <!-- <img src="./images/Component.png" alt=""> -->
+              </picture>
             </div>
           </div>
         </div>
@@ -340,7 +344,7 @@
             <div class="dop-item">
               <h3>Презентация дополнительного функционала</h3>
               <p>Оставьте заявку на презентацию трекера курьера или электронного меню</p>
-              <a class="btn_grnd btn_dop" href="#">Оставить заявку</a>
+              <a class="btn_grnd btn_dop btn-reg" href="#">Оставить заявку</a>
             </div>
             <div class="dop-item dop-item-right">
               <img src="./svg-img/dop.svg" alt="icon-section-zoom">
@@ -369,7 +373,7 @@
         <div class="presental-item-left">
           <img src="./svg-img/bron-table.svg" alt="">
           <h3>Презентация системы бронирования столов</h3>
-          <a class="btn_grnd shift" href="#">Заказать презентацию</a>
+          <a class="btn_grnd shift btn-reg" href="#">Заказать презентацию</a>
         </div>
       </section>
       <section id="deliver_food" class="wrapper">
@@ -392,14 +396,14 @@
           <div class="presental-item-left">
             <img src="./svg-img/bron-table.svg" alt="">
             <h3>Презентация системы бронирования столов</h3>
-            <a class="btn_grnd shift" href="#">Заказать презентацию</a>
+            <a class="btn_grnd shift btn-reg" href="#">Заказать презентацию</a>
           </div>
           <div class="presental-item-right">
             <div class="presental-item-img_container">
               <img src="./svg-img/icon-deliver.svg" alt="">
             </div>
             <h3>Презентация подписки на ежедневную доставку еды</h3>
-            <a class="btn_grnd shift" href="#">Заказать презентацию</a>
+            <a class="btn_grnd shift btn-reg" href="#">Заказать презентацию</a>
           </div>
         </div>
       </section>
@@ -434,11 +438,12 @@
             <div class="design-item">
               <h3>Возможно выполнение в уникальном дизайне</h3>
             </div>
-            <div class="a-container">
-              <a class="design_btn" href="#">
-                <span>Заявка на создание приложения с уникальным дизайном</span>
-              </a>
-            </div>
+            
+          </div>
+          <div class="a-container">
+            <a class="design_btn" href="#">
+              <span>Заявка на создание приложения с уникальным дизайном</span>
+            </a>
           </div>
         </div>
       </section>
@@ -515,7 +520,7 @@
             <h3>Попробуйте админстративную панель</h3>
             <p>Оставьте заявку и мы проведем для вас презентацию приложения и административной панели. Или скачайте административную панель на свое устроиство и попробуйте самостоятельно</p>
             <div class="admin_panel_app-item-bottum">
-              <a class="btn_grnd admin_panel_app-hid" href="#">Оставить заявку <span >на консультацию</span></a>
+              <a class="btn_grnd admin_panel_app-hid btn-reg" href="#">Оставить заявку <span >на консультацию</span></a>
               <div class="admin_panel_app-item-links">
                 <span>Админ. панель для <a href="#">Android</a></span>
                 <span>Админ. панель для <a href="#">iOS</a></span>
@@ -991,7 +996,7 @@
                 <input class="maskPhone" type="tel" name="tel" placeholder="+7 (     )     -     -">
               </div>
             </form>
-            <a class="btn_grnd" href="">Оставить заявку</a>
+            <a class="btn_grnd btn-reg" href="">Оставить заявку</a>
             <span>Оставляя заявку вы соглашаетесь с политикой конфиденицальности</span>
           </div>
         </div>
@@ -1031,6 +1036,9 @@
         </section>
         <div class="pole"></div>
       </div>
+      <footer height="400px" width="100%">
+
+      </footer>
     <!-- <script src="owlcarousel/owl.carousel.min.js"></script> -->
     <script src="owlcarousel/dist/owl.carousel.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>

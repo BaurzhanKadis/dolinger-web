@@ -986,17 +986,18 @@
           </div>
           <div class="callback-item callback-item-right">
             <h3>Оставьте заявку на консультацию</h3>
-            <form action="">
+            <form id="form__footer" action="">
               <div class="name">
-                <label for="name">Имя</label>
-                <input type="text" name="name" placeholder="Ваше имя">
+                <label for="formName">Имя</label>
+                <input id="formName" class="_req" type="text" name="name" placeholder="Ваше имя">
               </div>
               <div class="tel">
-                <label for="tel">Телефон</label>
-                <input class="maskPhone" type="tel" name="tel" placeholder="+7 (     )     -     -">
+                <label for="formProne">Телефон</label>
+                <input id="formProne" class="maskPhone _req" type="tel" name="tel" placeholder="+7 (     )     -     -">
               </div>
+              <button type="submit" class="btn_grnd">Оставить заявку</button>
             </form>
-            <a class="btn_grnd btn-reg" href="">Оставить заявку</a>
+            <!-- <a class="btn_grnd btn-reg" href="">Оставить заявку</a> -->
             <span>Оставляя заявку вы соглашаетесь с политикой конфиденицальности</span>
           </div>
         </div>

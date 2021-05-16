@@ -85,6 +85,7 @@ a {
   font-size: 18px;
 }
 .btn_grnd {
+  border: none;
   position: relative;
   overflow: hidden;
   font-family: "MyFontsBolfGilroy";
@@ -1708,6 +1709,17 @@ canvas {
   line-height: 150%;
   font-weight: 500;
   border: none;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+._error label {
+  color: red;
+}
+._error input {
+  border: 1px solid red;
 }
 /* end */
 

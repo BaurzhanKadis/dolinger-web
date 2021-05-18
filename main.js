@@ -1,4 +1,4 @@
-// "use strict"
+
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('load form')
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(result.massage)
         formFooter.reset();
       } else {
-        alert('error')
+        alert('error еее',error)
       }
       console.log('formData', formData)
       console.log('formFooter', formFooter)
@@ -65,23 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.onload = () => {
   console.log("start page");
-
-  // function get_name_browser(){
-  //   // получаем данные userAgent
-  //   var ua = navigator.userAgent;    
-  //   // с помощью регулярного выражения
-  //   // ищем упоминание названия браузера
-  //   if (ua.search(/Safari/) > 0) return true;
-  //   // Возвращем false если не нашли safari
-  //   return false;
-  // }
-    
-    
-  // // Если функция вернула true
-  // // То подключаем css
-  // if (get_name_browser()) {
-  //   document.write('<link rel="stylesheet" href="css/safari.css">');
-  // }
   
   // const btnReg = document.querySelector(".top_item-btn_grnd");
   const btnReg = document.querySelectorAll(".btn-reg");
@@ -214,6 +197,8 @@ $(document).ready(function(){
 
   console.log("start page2");
   if (window.innerWidth <= 480) {
+    console.log("start page3");
+
     document.querySelectorAll('.item_slider').forEach(e=>e.style.width = "220px")
     $(".slider").addClass("owl-carousel")
     $(".owl-carousel").owlCarousel({
@@ -224,9 +209,12 @@ $(document).ready(function(){
       margin: 30
     });
   } else {
+    console.log("start page5");
     $(".slider").removeClass("owl-carousel")
   }
   if (window.innerWidth <= 768) {
+    console.log("start page4");
+
     document.querySelectorAll('.function_item').forEach(e=>e.style.width = "210px")
     $(".function_items").addClass("owl-carousel")
     $(".owl-carousel").owlCarousel({
@@ -236,7 +224,7 @@ $(document).ready(function(){
       dotsEach: true,
       margin: 30
     });
-    // document.querySelector('#function_items .wrapper').append(document.querySelector('.function_items .owl-dots'))
+    document.querySelector('#function_items .wrapper').append(document.querySelector('.function_items .owl-dots'))
   } else {
     $(".function_items").removeClass("owl-carousel")
   }

@@ -41,7 +41,7 @@
 body {
   background-color: #fff;
   min-width: 320px;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .wrapper {
   max-width: 1280px;
@@ -1054,6 +1054,7 @@ canvas {
   display: flex;
   justify-content: center;
   bottom: -60px;
+  left: 0;
   width: 100%;
 }
 .design_btn {
@@ -2273,6 +2274,10 @@ canvas {
     padding-bottom: 87px;
     margin-bottom: 0;
     margin-top: 120px;
+    /* overflow: hidden; */
+  }
+  #function_items .wrapper {
+    padding: 0;
   }
   #canvas_top_wave .wrapper {
     overflow: hidden;
@@ -2457,11 +2462,12 @@ canvas {
   }
   .design {
     flex-direction: column-reverse;
+    /* overflow: hidden; */
   }
   .design-item {
     padding: 0;
     width: 100%;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
   }
   .design-item:nth-child(2) {
     display: none;
@@ -2474,9 +2480,9 @@ canvas {
   }
   .design-item-images {
     margin-top: 24px;
-    width: -webkit-fit-content;
+    /* width: -webkit-fit-content;
     width: -moz-fit-content;
-    width: fit-content;
+    width: fit-content; */
   }
   .design_btn {
     display: flex;
@@ -2750,9 +2756,10 @@ canvas {
     display: block;
   }
 
-  /* .function_items-container {
+  .function_items-container {
     overflow: hidden;
-  } */
+    padding: 0 20px;
+  }
   #canvas_top_wave .wrapper {
     overflow: hidden;
     width: 100%;
@@ -2813,6 +2820,9 @@ canvas {
     text-align: center;
   }
 
+  #admin {
+    overflow: hidden;
+  }
   .admin_panel_app-item-right {
     height: 170px;
   }
@@ -2981,10 +2991,6 @@ canvas {
     flex-direction: column;
   }
   .contacts .phone {
-    /* margin-top: 28px; */
     display: block;
   }
-  /* body {
-    overflow-y: hidden;
-  } */
 }

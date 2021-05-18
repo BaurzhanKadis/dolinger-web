@@ -4,12 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('load form')
 
   const formFooter = document.getElementById('form__footer')
+  const formFooterFix = document.getElementById('form__footer-fix')
   formFooter.addEventListener('submit', formSend)
+  formFooterFix.addEventListener('submit', formSend)
 
   async function formSend(e) {
     e.preventDefault();
-    let error = formValidation(formFooter)
-    let formData = new FormData(formFooter)
+    // let error = formValidation(formFooter)
+    let error = formValidation(e.target)
+    let formData = new FormData(e.target)
+    // let formData = new FormData(formFooter)
     if (error===0) {
       let response = await fetch('sendmail.php',{
         method: "POST",
@@ -23,13 +27,14 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('error еее',error)
       }
       console.log('formData', formData)
-      console.log('formFooter', formFooter)
+      console.log('formFooter', e.target)
     }
   }
 
   const formValidation = (form) => {
     let error = 0
-    let formReq = document.querySelectorAll('._req')
+    let formReq = form.querySelectorAll('._req')
+    // let formReq = document.querySelectorAll('._req')
 
     for(let i = 0; i< formReq.length; i++) {
       const input = formReq[i]
@@ -105,13 +110,13 @@ window.onload = () => {
   //   b.classList.add("body-hidden");
   // },{passive: true});
 
-  submit.addEventListener("click", () => {
-    items.forEach((item) => {
-      item.classList.add("dn");
-    });
-    document.querySelector(".good").classList.add("db");
-    document.querySelector(".modal-container").classList.add("wa");
-  },{passive: true});
+  // submit.addEventListener("click", () => {
+  //   items.forEach((item) => {
+  //     item.classList.add("dn");
+  //   });
+  //   document.querySelector(".good").classList.add("db");
+  //   document.querySelector(".modal-container").classList.add("wa");
+  // },{passive: true});
 
   const btnClose = (e) => {
     e.addEventListener("click", () => {

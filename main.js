@@ -19,15 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
         method: "POST",
         body: formData
       })
-      if (response.ok) {
-        let result = await response.json();
-        alert(result.massage)
-        formFooter.reset();
-      } else {
-        alert('error еее',error)
-      }
-      console.log('formData', formData)
-      console.log('formFooter', e.target)
+      // if (response.ok) {
+      //   let result = await response.json();
+      //   alert(result.massage)
+      //   formFooter.reset();
+      // } else {
+      //   alert('error еее',error)
+      // }
+      // console.log('formData', formData)
+      // console.log('formFooter', e.target)
     }
   }
 
@@ -100,8 +100,16 @@ window.onload = () => {
 
   btnReg.forEach(e=>{
     e.addEventListener("click", () => {
+      console.log('click')
+      console.log(e.innerHTML.indexOf('презентацию') !==-1 )
+      
       fixC.classList.add("fix_callback-active");
       b.classList.add("body-hidden");
+      if (e.innerHTML.indexOf('презентацию') !==-1 ) {
+        document.querySelector('.metka__title').innerText = 'Оставьте заявку на презентацию'
+      } else {
+        document.querySelector('.metka__title').innerText = 'Оставьте заявку на консультацию'
+      }
     },{passive: true})
   })
 

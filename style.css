@@ -86,6 +86,7 @@ a {
 }
 .btn_grnd {
   border: none;
+  font-size: 18px;
   position: relative;
   overflow: hidden;
   font-family: "MyFontsBolfGilroy";

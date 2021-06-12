@@ -128,12 +128,19 @@ a {
   transition: opacity 0.3s;
 }
 .btn_grnd:hover {
+  transform: scale3d(1.05,1.05,1.05);
+  -webkit-transform: scale3d(1.05,1.05,1.05);
+  -moz-transform: scale3d(1.05,1.05,1.05);
+  -ms-transform: scale3d(1.05,1.05,1.05);
+  -o-transform: scale3d(1.05,1.05,1.05);
+}
+/* .btn_grnd:hover {
   transform: scale3d(1.2,1.2,1);
   -webkit-transform: scale3d(1.2,1.2,1);
   -moz-transform: scale3d(1.2,1.2,1);
   -ms-transform: scale3d(1.2,1.2,1);
   -o-transform: scale3d(1.2,1.2,1);
-}
+} */
 .btn_grnd:hover.btn_grnd::before {
   transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
   transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
@@ -808,8 +815,8 @@ header {
   background-image: url(./svg-img/macbook.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  /* background-position-x: right; */
-  background-position-x: 90%;
+  background-position-x: right;
+  /* background-position-x: 90%; */
   position: relative;
 }
 #c {
@@ -1440,7 +1447,8 @@ canvas {
   border: 4px solid #a6a6a6;
   border-radius: 10px;
   position: relative;
-  max-height: 586px;
+  max-height: 864px;
+  /* max-height: 586px; */
 }
 .pricing_plans::after {
   position: absolute;
@@ -1448,8 +1456,9 @@ canvas {
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 155px;
-  content: "Дополнительные услуги";
+  top: 353px;
+  /* bottom: 155px; */
+  content: "Дополнительный функционал";
   width: 100%;
   height: 60px;
   font-size: 20px;
@@ -1490,6 +1499,27 @@ canvas {
   background-color: var(--mainWhite);
   border-left: 2px solid #e3e3e3;
 }
+.vigot span{
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px 6px;
+  background: linear-gradient(180deg, #FF9900 -2.62%, #FF6600 73.35%);
+  border-radius: 4px;
+  color: var(--mainWhite);
+}
+.arenda span{
+  position: relative;
+}
+.arenda span::before {
+  position: absolute;
+  content: '\20F0Аренда';
+  top: -35px;
+  font-weight: 400;
+  left: 0;
+  color: var(--mainBlack);
+}
 .pricing_plans-item .settings {
   border-left: 2px solid #e3e3e3;
   padding: 32px;
@@ -1502,16 +1532,44 @@ canvas {
   height: 100px;
 }
 .pricing_plans-item .synhro {
-  height: 155px;
-  padding: 45px 32px;
+  /* height: 155px; */
+  padding: 45px 25px;
+  /* padding: 45px 32px; */
   background-color: var(--mainWhite);
   border-left: 2px solid #e3e3e3;
+}
+.pricing_plans-item .razov ul li {
+  list-style: none;
+  position: relative;
+  margin-bottom: 35px;
+}
+.pricing_plans-item .razov ul li:nth-last-child(1) {
+  margin-bottom: 0;
+}
+.pricing_plans-item .dop__price ul li {
+  list-style: none;
+  margin-bottom: 38px;
+}
+.pricing_plans-item .dop__price ul li:nth-child(1) {
+  margin-bottom: 64px;
+}
+.pricing_plans-item .dop__price ul li:nth-last-child(1) {
+  margin-bottom: 0;
+}
+.pricing_plans-item .razov ul li::after {
+  position: absolute;
+  content: '\20F0разовый платеж';
+  bottom: -25px;
+  font-weight: 400;
+  left: 0;
+  color: var(--mainBlack);
 }
 .pricing_plans-first .settings {
   padding: 32px 32px 32px 40px;
 }
 .pricing_plans-first .synhro {
-  padding: 45px 32px 45px 40px;
+  padding: 45px 22px 45px 40px;
+  /* padding: 45px 32px 45px 40px; */
 }
 .pricing_plans-first .price {
   padding: 16px 40px;
@@ -1523,7 +1581,7 @@ canvas {
   font-weight: 600;
   line-height: 120%;
 }
-.price .old-price {
+.price .old-price, .synhro .old-price {
   color: #cd331e;
   text-decoration: line-through;
 }
@@ -1579,7 +1637,8 @@ canvas {
   height: 100px;
   font-size: 20px;
   font-weight: 600;
-  padding: 30px 40px;
+  /* padding: 30px 40px; */
+  padding: 30px 37px;
   background-color: #fff;
   border-left: 2px solid #e3e3e3;
 }

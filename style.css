@@ -2643,7 +2643,8 @@ canvas {
   }
   .output {
     position: relative;
-    height: 310px;
+    height: 760px;
+    /* height: 310px; */
   }
   .tab_dop, .tab_pp {
     list-style: none;
@@ -2696,8 +2697,11 @@ canvas {
     display: flex;
     padding: 0 20px;
   }
-  .synchro-mobile, .el-mobile:nth-last-child(1) {
+  .synchro-mobile:nth-last-child(1), .el-mobile:nth-last-child(1) {
     border-bottom: 1px solid #ccc;
+  }
+  .synchro-mobile .sale {
+    display: block;
   }
   .ppm_bottum-dop {
     padding: 0 20px;
@@ -2816,7 +2820,7 @@ canvas {
     -o-border-radius: 20px;
   }
   .modal__mobile::before {
-    
+
     position: absolute;
     content: '';
     top: -10px;
@@ -3143,7 +3147,7 @@ canvas {
     bottom: -500px;
   }
 
-  .price-mobile, .settings-mobile, .synchro-mobile, .ppm_bottum-dop, .el-mobile {
+  .price-mobile, .settings-mobile, .synchro-mobile, .ppm_bottum-dop, .el-mobile, .tabs_dop, .tabs_pp {
     padding: 0 11px;
   }
   .tab_pp, .tab_dop {

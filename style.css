@@ -18,22 +18,26 @@
   src: url(./fonts/gilroy-bold.ttf);
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "MyFontsBolfGilroy";
   src: url(./fonts/gilroy-bold.ttf);
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "MyFontsMediumGilroy";
   src: url(./fonts/gilroy-medium.ttf);
+  font-display: swap;
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: "MyFontsRegularGilroy";
   src: url(./fonts/gilroy-regular.ttf);
+  font-display: swap;
   font-weight: 400;
   font-style: normal;
 }
@@ -1530,7 +1534,8 @@ canvas {
 }
 .pricing_plans-item .settings {
   border-left: 2px solid #e3e3e3;
-  padding: 32px 10px;
+  padding: 32px 30px;
+  /* padding: 32px 10px; */
   height: 190px;
   background-color: var(--mainWhite);
 }
@@ -2044,6 +2049,7 @@ canvas {
   }
   .pricing_plans-item .settings {
     height: 180px;
+    padding: 32px 10px;
   }
   .price .old-price {
     display: block;

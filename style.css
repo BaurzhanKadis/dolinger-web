@@ -259,7 +259,8 @@ header {
   padding: 70px 0;
   max-width: 1900px;
   margin: 40px auto 130px;
-  background-image: url(./svg-img/mobile_and_macbook.svg);
+  /* background-image: url(./svg-img/mobile_and_macbook.svg); */
+  background-image: url(./images/mainPicters.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: right;

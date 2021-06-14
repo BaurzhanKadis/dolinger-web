@@ -1025,7 +1025,8 @@ canvas {
 #design {
   max-width: 1900px;
   margin: 180px auto;
-  background-image: url(./svg-img/design.svg);
+  background-image: url(./images/designPicters.png);
+  /* background-image: url(./svg-img/design.svg); */
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: left;

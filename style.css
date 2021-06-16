@@ -353,6 +353,9 @@ header {
 .clients-item {
   list-style: none;
 }
+.clients-item a {
+  cursor: inherit;
+}
 /* end */
 
 /* func start */

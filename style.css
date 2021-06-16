@@ -2812,75 +2812,6 @@ canvas {
     justify-content: center;
     align-items: center;
   }
-
-  /* modal */
-  .modal__mobile {
-    position: fixed;
-    background-color: var(--mainBlack);
-    margin: 20px;
-    bottom: 0;
-    padding: 20px;
-    display: none;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-  }
-  .modal__mobile::before {
-
-    position: absolute;
-    content: '';
-    top: -10px;
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-}
-  .modal__mobile-done__btn {
-    position: absolute;
-    top: 0;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-}
-  .modal__mobile-title {
-    color: var(--mainWhite);
-    font-size: 20px;
-    font-weight: 800;
-    text-align: center;
-    line-height: 130%;
-    margin-bottom: 10px;
-  }
-  .app__btns {
-    display: flex;
-    justify-content: space-around;
-  }
-  .mac__btn, .android__btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 137px;
-    padding: 10px 22px;
-    background-color: var(--mainWhite);
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-  }
-  .mac__btn span, .android__btn span {
-    font-size: 10px;
-    margin-left: 10px;
-  }
 }
 
 @media (max-width: 400px) {
@@ -3108,6 +3039,94 @@ canvas {
     position: relative;
     top: -100px;
   }
+  /* modal */
+  .modal__mobile {
+    position: fixed;
+    z-index: 1;
+    /*background-color: var(--mainBlack);*/
+    background-image: url(./svg-img/mobile/modal/block.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    margin: 20px;
+    bottom: 0;
+    padding: 20px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+  .modal__mobile-done__btn {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    left: 0;
+    justify-content: center;
+    top: -13px;
+  }
+  .arrow__btn-circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -1px;
+    width: 26px;
+    height: 26px;
+    background-color: var(--mainBlack);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  .arrow__btn {
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid var(--mainWhite);
+    border-left: 2px solid var(--mainWhite);
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+}
+  .arrow__btn-active {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+  }
+  .modal__mobile-title {
+    color: var(--mainWhite);
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 130%;
+    margin-bottom: 10px;
+  }
+  .app__btns {
+    display: flex;
+    justify-content: space-around;
+  }
+  .mac__btn, .android__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 137px;
+    padding: 10px 22px;
+    background-color: var(--mainWhite);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  .mac__btn span, .android__btn span {
+    font-size: 10px;
+    margin-left: 10px;
+  }
 }
 @media (max-width: 375px) {
   h1.mobile_h1 {
@@ -3171,6 +3190,8 @@ canvas {
   .callback-item img {
     width: 100%;
   }
+}
+@media (max-width: 350px) {
   .mac__btn, .android__btn {
     max-width: 110px;
     padding: 10px 5px;

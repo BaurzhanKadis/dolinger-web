@@ -3171,6 +3171,11 @@ canvas {
     top: -44px;
   }
 }
+@media (min-width: 481px) {
+  .container-img_anti-block, .modal__mobile {
+    display: none;
+  }
+}
 @media (max-width: 375px) {
   h1.mobile_h1 {
     font-size: 24px;

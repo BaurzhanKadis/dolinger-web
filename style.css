@@ -3046,12 +3046,13 @@ canvas {
     position: relative;
     top: -100px;
   }
+
   /* modal */
   .modal__mobile {
     position: fixed;
     z-index: 1;
-    /*background-color: var(--mainBlack);*/
-    background-image: url(./svg-img/mobile/modal/block.svg);
+    /*background-color: var(--mainBlack);
+    */background-image: url(./svg-img/mobile/modal/block.svg);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -3063,7 +3064,15 @@ canvas {
     -moz-border-radius: 25px;
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
-}
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+  .modal__mobile-active {
+    bottom: -200px;
+  }
   .modal__mobile-done__btn {
     position: absolute;
     display: flex;
@@ -3071,8 +3080,19 @@ canvas {
     left: 0;
     justify-content: center;
     top: -13px;
+    transition: ease-in 0.5s;
+    -webkit-transition: ease-in 0.5s;
+    -moz-transition: ease-in 0.5s;
+    -ms-transition: ease-in 0.5s;
+    -o-transition: ease-in 0.5s;
+}
+  .modal__mobile-active .arrow__btn-circle {
+    border: 3px solid white;
+    box-sizing: content-box;
   }
   .arrow__btn-circle {
+    border: none;
+    box-sizing: border-box;
     position: relative;
     display: flex;
     justify-content: center;
@@ -3092,11 +3112,11 @@ canvas {
     height: 6px;
     border-bottom: 2px solid var(--mainWhite);
     border-left: 2px solid var(--mainWhite);
-    transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-    -moz-transform: rotate(-135deg);
-    -ms-transform: rotate(-135deg);
-    -o-transform: rotate(-135deg);
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
 }
   .arrow__btn-active {
     transform: rotate(-45deg);
@@ -3113,7 +3133,7 @@ canvas {
     line-height: 130%;
     margin-bottom: 10px;
   }
-  .app__btns {
+  .app__btns, .container-img_anti-block {
     display: flex;
     justify-content: space-around;
   }
@@ -3133,6 +3153,22 @@ canvas {
   .mac__btn span, .android__btn span {
     font-size: 10px;
     margin-left: 10px;
+  }
+  .container-img_anti-block {
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    transition: 0.7s;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
+}
+  .anti-block-active {
+    bottom: 0;
+  }
+  .modal__mobile-active .modal__mobile-done__btn {
+    top: -44px;
   }
 }
 @media (max-width: 375px) {

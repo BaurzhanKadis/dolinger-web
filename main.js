@@ -202,6 +202,12 @@ $(document).ready(function(){
   $('.header__burger').click(()=>{
     $('.header__burger').toggleClass('active_burger');
   })
+  $('.arrow__btn-circle').click(()=>{
+    $('.modal__mobile').toggleClass('modal__mobile-active');
+    $('.arrow__btn').toggleClass('arrow__btn-active');
+    $('.container-img_anti-block').toggleClass('anti-block-active ');
+  })
+  
   if (window.innerWidth <= 992) {
     document.querySelector('.admin').after(document.querySelector('.admin-three'))
   } else {

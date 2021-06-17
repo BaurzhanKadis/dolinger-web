@@ -50,8 +50,11 @@
             <a class="top_item-btn_normal btn-reg">Оставить заявку на подключение</a>
           </div>
           <div class="top_item">
-            <!-- <img class="top_mobile-img" src="./svg-img/mobile/web-app.svg" alt="" /> -->
-            <img class="top_mobile-img mini_phone" data-src="./images/mobile/pnoneandmac.png" alt="iphone & macbook pro" />
+            <picture class="top_mobile-img">
+              <source srcset="./images/mobile/pnoneandmac-mini.png" media="(max-width: 480px)">
+              <img width="100%" src="./images/mobile/pnoneandmac.png" alt="iphone & macbook pro max-width: 992px">
+            </picture>
+            <!-- <img class="top_mobile-img mini_phone" src="./images/mobile/pnoneandmac.png" alt="iphone & macbook pro" /> -->
           </div>
         </div>
       </section>
@@ -395,10 +398,11 @@
       </section>
       <section id="presental-item-left" class="wrapper">
         <div class="presental-item-left">
-          <picture>
+          <img data-src="./svg-img/bron-table.svg" alt="" >
+          <!-- <picture>
             <source srcset="/images/bron-table-mini.png" media="(max-width: 480px)">
             <img src="./images/bron-table.png" alt="">
-          </picture>
+          </picture> -->
           <h3>Презентация системы бронирования столов</h3>
           <a class="btn_grnd shift btn-reg" >Заказать презентацию</a>
         </div>
@@ -414,7 +418,11 @@
             </div>
           </div>
           <div class="deliver_food-item standart-item">
-            <img data-src="./svg-img/deliver-food-app.svg" alt="">
+            <picture>
+              <source srcset="/images/deliver-food-app-mini.png" media="(max-width: 480px)">
+              <img src="./images/deliver-food-app.png" alt="">
+            </picture>
+            <!-- <img data-src="./svg-img/deliver-food-app.svg" alt=""> -->
           </div>
         </div>
       </section>

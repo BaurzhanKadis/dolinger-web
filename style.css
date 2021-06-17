@@ -314,9 +314,9 @@ header {
   height: 1px;
   background-color: #f7984b;
 }
-.mini_phone {
+/* .mini_phone {
   display: none;
-}
+} */
 
 /* section discription start */
 #discription {
@@ -915,7 +915,7 @@ canvas {
 #el_menu {
   /* max-width: 1900px;
   margin: 0 auto; */
-  background: url(./images/mobile/restoran.webp);
+  background: url(./images/mobile/restoran.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;

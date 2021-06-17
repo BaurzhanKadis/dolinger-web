@@ -612,6 +612,7 @@ header {
 .standart-item img {
   width: 100%;
 }
+
 .product-item-container {
   width: 64%;
 }
@@ -821,7 +822,7 @@ header {
 #web {
   /* max-width: 1900px; */
   /* margin: 180px auto; */
-  background-image: url(./svg-img/macbook.svg);
+  background-image: url(./images/macbook.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: right;
@@ -898,7 +899,10 @@ canvas {
   justify-content: space-between;
   width: 60%;
 }
-.trecker-item-left img {
+/* .trecker-item-left img {
+  width: 47%;
+} */
+.trecker-item-left picture {
   width: 47%;
 }
 .trecker-item-right {
